@@ -10,7 +10,15 @@ $(document).ready(function() {
  */
 function initializePage() {
 	$("#testjs").click(function(e) {
-		$('.jumbotron h1').text("Javascript has taken control");
+		//$('.jumbotron h1').animate({opacity: 'toggle'}, 'slow');
+		//var firstClick = $('.jumbotron h1')
+		//if (firstClick.toggle == 1){
+		//	$('.jumbotron h1').text("Goodbye Pretty Pictures");
+		//} else {
+		//	$('.jumbotron h1').text("Oh Hello Again");
+		//}		
+		$('.img').animate({opacity: 'toggle'}, 'slow');
+		//$('.jumbotron h1').text("Tiffany Zhang");
 		//$("#testjs").text("Please wait...");
 		//$("#testjs").addClass("active");
 		$("#testjs").toggleClass("active");
@@ -33,6 +41,7 @@ function projectClick(e){
 		$(containingProject).append("<div class='project-description'><p>Description of the project.</p></div>");
 	} else {
 		//description.html("<p>Stop clicking on me! You just did at " + (new Date()) + "</p>");
-		$(this).fadeOut()
+		$(containingProject).toggle()
+		//$(description).toggle()
 	}
 }

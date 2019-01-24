@@ -37,6 +37,11 @@ app.get('/', hello.view);
 
 app.get('/hello/:userName', hello.view);
 
+//app.get('/', function(req, res){
+//	res.send('Hello, World!');
+//});
+
+//app.listen(3000);
 // Example route
 // app.get('/users', user.list);
 
